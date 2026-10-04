@@ -1,0 +1,6 @@
+{
+  "name": "إيتاج تاج سيتي | شركة مدينة مصر",
+  "description": "المرحلة الجديدة إيتاج (Étaje) في كمبوند تاج سيتي على طريق السويس من شركة مدينة مصر. وحدات وشقق سكنية عصرية مع أنظمة سداد ميسرة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
