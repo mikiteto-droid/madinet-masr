@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, Mail, Globe, ArrowUp, Building2, ShieldCheck } from 'lucide-react';
-import { CONTACT_PHONE, CONTACT_PHONE_FORMATTED, WHATSAPP_LINK, TARGET_EMAIL } from '../data/projectData';
+import { Phone, MessageCircle, MapPin, Globe, ArrowUp, Building2, ShieldCheck } from 'lucide-react';
+import { CONTACT_PHONE, CONTACT_PHONE_FORMATTED, WHATSAPP_LINK } from '../data/projectData';
 
 export const Footer: React.FC = () => {
   return (
@@ -88,17 +88,6 @@ export const Footer: React.FC = () => {
                   <span className="text-xs font-bold text-white">محادثة فورية:</span>
                 </div>
                 <span className="text-xs font-bold">واتساب مبيعات إيتاج</span>
-              </a>
-
-              <a
-                href={`mailto:${TARGET_EMAIL}`}
-                className="flex items-center justify-between p-3 rounded-xl bg-[#240a12] border border-[#d4af37]/30 hover:border-amber-400 transition-all text-amber-300"
-              >
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-amber-400" />
-                  <span className="text-xs font-bold text-white">البريد الإلكتروني:</span>
-                </div>
-                <span className="text-xs font-bold font-sans" dir="ltr">{TARGET_EMAIL}</span>
               </a>
             </div>
 

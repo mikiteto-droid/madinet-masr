@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Send, CheckCircle, User, Smartphone, Clock, Sparkles, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Send, CheckCircle, User, Smartphone, Clock, Sparkles } from 'lucide-react';
 import { CONTACT_PHONE, CONTACT_PHONE_FORMATTED, WHATSAPP_LINK, TARGET_EMAIL } from '../data/projectData';
 
 export const ContactFormSection: React.FC = () => {
@@ -116,7 +116,7 @@ export const ContactFormSection: React.FC = () => {
                   شكراً لك يا <strong className="text-amber-300">{formData.name}</strong>. تم تسجيل اهتمامك بمشروع إيتاج كمبوند تاج سيتي طريق السويس.
                 </p>
                 <div className="bg-[#240a12] p-4 rounded-xl border border-[#d4af37]/30 text-xs text-stone-300 max-w-md mx-auto space-y-1.5">
-                  <p>تم إرسال بيانات طلبك إلى البريد الإلكتروني: <strong className="text-amber-300" dir="ltr">{TARGET_EMAIL}</strong></p>
+                  <p className="text-emerald-400 font-bold">تم إرسال بيانات طلبك بنجاح إلى إدارة المبيعات.</p>
                   <p>سيتواصل معك مستشار المبيعات على رقمك: <strong className="text-white" dir="ltr">{formData.phone}</strong> خلال دقائق معدودة.</p>
                   <p className="text-amber-400 pt-1">للحصول على الرد الفوري دون انتظار، يمكنك أيضاً بدء محادثة واتساب الآن:</p>
                 </div>
@@ -153,15 +153,9 @@ export const ContactFormSection: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="border-b border-[#d4af37]/20 pb-3 mb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <div>
-                    <h3 className="text-lg font-bold text-white">استمارة الحجز والاستفسار</h3>
-                    <p className="text-xs text-stone-400 mt-0.5">ادخل بياناتك وسنتواصل معك خلال 10 دقائق</p>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#2b0c15] border border-[#d4af37]/30 text-[11px] text-amber-300 font-medium">
-                    <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
-                    <span dir="ltr">{TARGET_EMAIL}</span>
-                  </div>
+                <div className="border-b border-[#d4af37]/20 pb-3 mb-2">
+                  <h3 className="text-lg font-bold text-white">استمارة الحجز والاستفسار</h3>
+                  <p className="text-xs text-stone-400 mt-0.5">ادخل بياناتك وسنتواصل معك خلال 10 دقائق</p>
                 </div>
 
                 {errorMsg && (
@@ -292,16 +286,6 @@ export const ContactFormSection: React.FC = () => {
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   <span>شات واتساب</span>
-                </a>
-              </div>
-
-              <div className="pt-2 border-t border-[#d4af37]/20 mt-3">
-                <a
-                  href={`mailto:${TARGET_EMAIL}?subject=${encodeURIComponent('استفسار عن إيتاج تاج سيتي طريق السويس')}`}
-                  className="flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-[#270b13] hover:bg-[#3a101d] text-amber-200 border border-[#d4af37]/30 text-xs font-medium transition-colors"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
-                  <span>مراسلة عبر البريد: <strong dir="ltr">{TARGET_EMAIL}</strong></span>
                 </a>
               </div>
             </div>
